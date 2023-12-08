@@ -1,1 +1,65 @@
+Data Analytics 
+Data Analytics is examining transforming and arrange data so that you can extract and study useful infomation 
+kpi(key performance indicators )- type of perfomance measurement that a company or organization to detemine performnace over time 
+
+Descriptive Analytics ( what happended ?) accurate comprehensive live-data and effective visulalization  e.g dashboards report KPI ROI
+Diagnostics Analytics ( why did it happen ) drill down to investigate root cause focused on subset of descriptive analytics dataset 
+Predictive Analytics ( what will happen) use historical data with statistics and ML to generate trends or predicitions 
+Predictive Analytics ( what  will happen ) using hybrid data with ML to predict future scenarios that are exploitable 
+congitive analytics ( what -if  this happens?) using ML and NLP t detemine what-if scenarios to create plans if they happen
+
+# azure Synapse Analytics 
+
+Azure synapse analytics is a data warehouse and unified analytics platform 
+* build ETL/ELT processes 
+* eaily ingest data from more that 95 native connector 
+Deeply integrated Apach spark 
+use T-sql queries on both your data warehouse and spark engines 
+supprt multiple language t-SQL ,Pyhton ,scale , spark SQL and .net
+integrated with artificial intelligent (AI) and Business intelligence tools (BI)
+azure machine learning 
+azure congito service 
+
+# synapse SQL 
+synapse SQL is a distrbuted version f T-sql designed for data warehouse workload
+extend T-SQL to address streaming and machine learning scenarion
+use built-in streaming capabilities to land data from cloud data source into SQL tables
+integrate AI with SQL by using ML models to score data using the T-sql predict function and offers both serveless and dedicated resource models
+for unpredictable workload (unplanned or bursty) use the always available , serverless SQL endpoint 
+for predictable workload 
+create dedicatated SQL pools to reserve processing power for data stored in SQL tables 
+
+# Apache Synapes 
+can deeply and seamlessly integrates with apache spark 
+Ml models with sparkML algorithms and AzureMl integration for Apache spark 2.4 
+with built -in support for liunx foundatation Delta lake 
+simplified resource model that frees you from having to worry about managing cluster 
+fast spark start-up and aggressive autoscaling 
+built -in support for .net for spark allowing you to reuse youe C# expertise abd existing .NET codde within a spark application 
+Azure synapse remove the traditional technology barriers between using SQL and spark together , you can seamlessly mix and match based on your needs and expertise 
+table defined on files in the data lake are seamlessly consumed by either spark or hive 
+SQL and spark can directly explore and analyze parquet csv tsv and json files stored in the data lake 
+fast scalable data loading b/n SQL and Spark database 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
