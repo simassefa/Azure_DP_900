@@ -21,3 +21,44 @@ data lake storage is azure Blog storage which is has been extended to support bi
 designed to handle petabytes of data and hunderds of gigabits of throughput 
 in order to efficiently access data, Data lake Storage adds a  hierarchical namespace to azure blob storage 
 (access control list ACLs , throtting and Timeout Management Performance optimizations )
+
+# Blob storage 
+Blob storage is a object-store that is optimized for storing massive amount of unstructred data 
+unstructured data is data that doesn't adhere to a particular data model or definition such as text or binary data 
+
+storage account --- containers(similar to a flolder in a file system ) -- blobs (the actual data being stored 
+)
+Azure Storage support 3 type of blobs
+
+1 Block blobs 
+store text and binary data 
+made up of blocks of data that can be managed individually
+store up to about 4.75 tib of data 
+2 append blobs 
+optimized for append operations
+ideal for scenarios such as logging data from virtual machine
+3 page blobs 
+store random access files up to 8 tb in size 
+
+Aure Files --Use cases
+use cases 
+completely replace or supplement on -permise file servers Network Attach Storage (NAS) devices 
+lift- and -shift your on-permise storage to the cloud via classic lift or hybrid lift 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
