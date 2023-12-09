@@ -2,3 +2,22 @@
 is a storage and storage synchronization service for files which resides in the cloud similar product  Dropbox, GoogleDrive, Box and micrsoft sharepoint 
 # microsoft 365 sharepoint 
 is a web-based collaborative platform that integrates into micrsoft offfice. intended for document management and shared storage 
+
+
+A data lake is a centralized data repository for unstructure and semi structred data 
+a data lake is intended to store vast amount of data 
+Data lakes generally use object(blobs) or files as its storage medium 
+Transform 
+change or blend data into new semi-structored data using ETL/ELT engines 
+Distribution 
+allow access to data to various programs or APIS 
+collect
+pulling from various data source 
+publish 
+publish dataset to meta catalogs so anlaysts can quickly find useful data 
+
+azure Data lake Storage Gen2 
+data lake storage is azure Blog storage which is has been extended to support big data analytics workloads
+designed to handle petabytes of data and hunderds of gigabits of throughput 
+in order to efficiently access data, Data lake Storage adds a  hierarchical namespace to azure blob storage 
+(access control list ACLs , throtting and Timeout Management Performance optimizations )
