@@ -1,1 +1,111 @@
+ step 1 create storage account in mac 
+ 
+simretdemissie@simrets-MacBook-Pro ~ % az group create --name dp203ressimw --location westus
 
+{
+  "id": "/subscriptions/3239c3b9-e340-43c7-b8a3-e0f3e201d98d/resourceGroups/dp203ressimw",
+  "location": "westus",
+  "managedBy": null,
+  "name": "dp203ressimw",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null,
+  "type": "Microsoft.Resources/resourceGroups"
+}
+(base) simretdemissie@simrets-MacBook-Pro ~ % az storage account create --name dp203storagesim1 --resource-group dp203ressimw --location westus --sku Standard_LRS
+
+The public access to all blobs or containers in the storage account will be disallowed by default in the future, which means default value for --allow-blob-public-access is still null but will be equivalent to false.
+{
+  "accessTier": "Hot",
+  "accountMigrationInProgress": null,
+  "allowBlobPublicAccess": false,
+  "allowCrossTenantReplication": false,
+  "allowSharedKeyAccess": null,
+  "allowedCopyScope": null,
+  "azureFilesIdentityBasedAuthentication": null,
+  "blobRestoreStatus": null,
+  "creationTime": "2023-12-14T23:55:00.921700+00:00",
+  "customDomain": null,
+  "defaultToOAuthAuthentication": null,
+  "dnsEndpointType": null,
+  "enableHttpsTrafficOnly": true,
+  "enableNfsV3": null,
+  "encryption": {
+    "encryptionIdentity": null,
+    "keySource": "Microsoft.Storage",
+    "keyVaultProperties": null,
+    "requireInfrastructureEncryption": null,
+    "services": {
+      "blob": {
+        "enabled": true,
+        "keyType": "Account",
+        "lastEnabledTime": "2023-12-14T23:55:01.140545+00:00"
+      },
+      "file": {
+        "enabled": true,
+        "keyType": "Account",
+        "lastEnabledTime": "2023-12-14T23:55:01.140545+00:00"
+      },
+      "queue": null,
+      "table": null
+    }
+  },
+  "extendedLocation": null,
+  "failoverInProgress": null,
+  "geoReplicationStats": null,
+  "id": "/subscriptions/3239c3b9-e340-43c7-b8a3-e0f3e201d98d/resourceGroups/dp203ressimw/providers/Microsoft.Storage/storageAccounts/dp203storagesim1",
+  "identity": null,
+  "immutableStorageWithVersioning": null,
+  "isHnsEnabled": null,
+  "isLocalUserEnabled": null,
+  "isSftpEnabled": null,
+  "isSkuConversionBlocked": null,
+  "keyCreationTime": {
+    "key1": "2023-12-14T23:55:00.999820+00:00",
+    "key2": "2023-12-14T23:55:00.999820+00:00"
+  },
+  "keyPolicy": null,
+  "kind": "StorageV2",
+  "largeFileSharesState": null,
+  "lastGeoFailoverTime": null,
+  "location": "westus",
+  "minimumTlsVersion": "TLS1_0",
+  "name": "dp203storagesim1",
+  "networkRuleSet": {
+    "bypass": "AzureServices",
+    "defaultAction": "Allow",
+    "ipRules": [],
+    "ipv6Rules": [],
+    "resourceAccessRules": null,
+    "virtualNetworkRules": []
+  },
+  "primaryEndpoints": {
+    "blob": "https://dp203storagesim1.blob.core.windows.net/",
+    "dfs": "https://dp203storagesim1.dfs.core.windows.net/",
+    "file": "https://dp203storagesim1.file.core.windows.net/",
+    "internetEndpoints": null,
+    "microsoftEndpoints": null,
+    "queue": "https://dp203storagesim1.queue.core.windows.net/",
+    "table": "https://dp203storagesim1.table.core.windows.net/",
+    "web": "https://dp203storagesim1.z22.web.core.windows.net/"
+  },
+  "primaryLocation": "westus",
+  "privateEndpointConnections": [],
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": null,
+  "resourceGroup": "dp203ressimw",
+  "routingPreference": null,
+  "sasPolicy": null,
+  "secondaryEndpoints": null,
+  "secondaryLocation": null,
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "statusOfPrimary": "available",
+  "statusOfSecondary": null,
+  "storageAccountSkuConversionStatus": null,
+  "tags": {},
+  "type": "Microsoft.Storage/storageAccounts"
+}
