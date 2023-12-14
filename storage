@@ -15,12 +15,26 @@ collect
 pulling from various data source 
 publish 
 publish dataset to meta catalogs so anlaysts can quickly find useful data 
+ # Blob storage 
+cheapest storage type 
+lifecycle management 
+flat namespace 
+slower query performance 
 
 azure Data lake Storage Gen2 
+
+build on top of Blob storage
+
 data lake storage is azure Blog storage which is has been extended to support big data analytics workloads
 designed to handle petabytes of data and hunderds of gigabits of throughput 
 in order to efficiently access data, Data lake Storage adds a  hierarchical namespace to azure blob storage 
 (access control list ACLs , throtting and Timeout Management Performance optimizations )
+Hadoop compatabible file system (HDFS)
+Big data analytics 
+POSIX -like directory and file permissions
+scalable 
+Don't need to move data prior to analysis
+
 
 # Blob storage 
 Blob storage is a object-store that is optimized for storing massive amount of unstructred data 
@@ -29,6 +43,8 @@ unstructured data is data that doesn't adhere to a particular data model or defi
 storage account --- containers(similar to a flolder in a file system ) -- blobs (the actual data being stored 
 )
 Azure Storage support 3 type of blobs
+
+
 
 1 Block blobs 
 store text and binary data 
