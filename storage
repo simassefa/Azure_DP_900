@@ -20,9 +20,7 @@ cheapest storage type
 lifecycle management 
 flat namespace 
 slower query performance 
-
 azure Data lake Storage Gen2 
-
 build on top of Blob storage
 
 data lake storage is azure Blog storage which is has been extended to support big data analytics workloads
@@ -35,6 +33,15 @@ POSIX -like directory and file permissions
 scalable 
 Don't need to move data prior to analysis
 
+# File type for Data storage 
+csv
+json
+# Apach Avro 
+binary format that great for write operation but slower to read ( not readble in normal text editer )
+# Apach Parquet 
+binary format that stores columnar data
+schema/ metadata travels with the data 
+fast query performance with reduced disk I/O
 
 # Blob storage 
 Blob storage is a object-store that is optimized for storing massive amount of unstructred data 
@@ -61,7 +68,13 @@ use cases
 completely replace or supplement on -permise file servers Network Attach Storage (NAS) devices 
 lift- and -shift your on-permise storage to the cloud via classic lift or hybrid lift 
 
-
+storage design for efficient querying
+how many bytes does your query read and/or write
+how cpu intensive is the query 
+field indexing 
+primary key 
+partition key 
+row key 
 
 
 
