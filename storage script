@@ -109,3 +109,78 @@ The public access to all blobs or containers in the storage account will be disa
   "tags": {},
   "type": "Microsoft.Storage/storageAccounts"
 }
+# create account keys list 
+az storage account keys list --account-name dp203storagesim1 --resource-group dp203ressimw --output table
+
+az storage account keys list --account-name dp203storagesim1 --resource-group dp203ressimw --output table              
+
+CreationTime                      KeyName    Permissions    Value
+--------------------------------  ---------  -------------  ----------------------------------------------------------------------------------------
+2023-12-14T23:55:00.999820+00:00  key1       FULL           XEWeIOKULjePOSCVLRyJ/wxwCU8n4jDFwETp1GtLfmU+iNQwm7rV37LlxL7DqCGa/TwR4MMm7x8l+AStWq+2uQ==
+2023-12-14T23:55:00.999820+00:00  key2       FULL           lGWYTrAfYjYDaTslkoqL4pQPV5LaFY8lclwb4Fdx7oq6s2gW04d8qh1BsACwT0qwVSLVmedzD510+AStB4z9/A==
+
+##
+create 
+export AZURE_STORAGE_ACCOUNT=dp203storagesim1
+export AZURE_STORAGE_ACCESS_KEY=XEWeIOKULjePOSCVLRyJ/wxwCU8n4jDFwETp1GtLfmU+iNQwm7rV37LlxL7DqCGa/TwR4MMm7x8l+AStWq+2uQ==
+
+az storage account show-connection-string --name dp203storagesim1 --resource-group dp203ressimw
+
+
+(base) simretdemissie@simrets-MacBook-Pro ~ % export AZURE_STORAGE_ACCOUNT=dp203storagesim1
+(base) simretdemissie@simrets-MacBook-Pro ~ % export AZURE_STORAGE_ACCESS_KEY=XEWeIOKULjePOSCVLRyJ/wxwCU8n4jDFwETp1GtLfmU+iNQwm7rV37LlxL7DqCGa/TwR4MMm7x8l+AStWq+2uQ==
+
+(base) simretdemissie@simrets-MacBook-Pro ~ % az storage account show-connection-string --name dp203storagesim1 --resource-group dp203ressimw
+
+
+{
+  "connectionString": "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=dp203storagesim1;AccountKey=XEWeIOKULjePOSCVLRyJ/wxwCU8n4jDFwETp1GtLfmU+iNQwm7rV37LlxL7DqCGa/TwR4MMm7x8l+AStWq+2uQ==;BlobEndpoint=https://dp203storagesim1.blob.core.windows.net/;FileEndpoint=https://dp203storagesim1.file.core.windows.net/;QueueEndpoint=https://dp203storagesim1.queue.core.windows.net/;TableEndpoint=https://dp203storagesim1.table.core.windows.net/"
+}
+(base) simretdemissie@simrets-MacBook-Pro ~ % 
+
+set azure_storage_connection_string DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=dp203storagesim1;AccountKey=XEWeIOKULjePOSCVLRyJ/wxwCU8n4jDFwETp1GtLfmU+iNQwm7rV37LlxL7DqCGa/TwR4MMm7x8l+AStWq+2uQ==;BlobEndpoint=https://dp203storagesim1.blob.core.windows.net/;FileEndpoint=https://dp203storagesim1.file.core.windows.net/;QueueEndpoint=https://dp203storagesim1.queue.core.windows.net/;TableEndpoint=https://dp203storagesim1.table.core.windows.net/"
+
+export AZURE_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=dp203storagesim1;AccountKey=XEWeIOKULjePOSCVLRyJ/wxwCU8n4jDFwETp1GtLfmU+iNQwm7rV37LlxL7DqCGa/TwR4MMm7x8l+AStWq+2uQ==;BlobEndpoint=https://dp203storagesim1.blob.core.windows.net/;FileEndpoint=https://dp203storagesim1.file.core.windows.net/;QueueEndpoint=https://dp203storagesim1.queue.core.windows.net/;TableEndpoint=https://dp203storagesim1.table.core.windows.net/"
+
+az storage container create --name dp203containercli 
+
+az storage container create --name dp203containercli
+{
+  "created": true
+}
+
+(base) simretdemissie@simrets-MacBook-Pro Desktop % az storage blob upload --connection-string "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=dp203storagesim1;AccountKey=XEWeIOKULjePOSCVLRyJ/wxwCU8n4jDFwETp1GtLfmU+iNQwm7rV37LlxL7DqCGa/TwR4MMm7x8l+AStWq+2uQ==;BlobEndpoint=https://dp203storagesim1.blob.core.windows.net/;FileEndpoint=https://dp203storagesim1.file.core.windows.net/;QueueEndpoint=https://dp203storagesim1.queue.core.windows.net/;TableEndpoint=https://dp203storagesim1.table.core.windows.net/" --container-name dp203containercli --name simresuma --type block --content-type "application/pdf" --file "/Users/simretdemissie/Desktop/sim_assefa.pdf"
+
+Finished[#############################################################]  100.0000%
+{
+  "client_request_id": "9f3d8fdc-9ae0-11ee-a496-ba99369b1220",
+  "content_md5": "7vo1XWtHwIT6LPbj/PizKQ==",
+  "date": "2023-12-15T00:26:43+00:00",
+  "encryption_key_sha256": null,
+  "encryption_scope": null,
+  "etag": "\"0x8DBFD0483982270\"",
+  "lastModified": "2023-12-15T00:26:43+00:00",
+  "request_id": "42acbd49-001e-0021-15ed-2e39c2000000",
+  "request_server_encrypted": true,
+  "version": "2022-11-02",
+  "version_id": null
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
